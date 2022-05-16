@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0 auto;
+            font: size 1,5 rem;
+            color: coral;
+            text-align: center;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+            grid-template-columns: 75% 25%;
+            grid-template-rows: 100px 450px 150px;
+            grid-template-areas: "cabeçalho cabeçalho" "seção barra-lateral" "roda";
+        }
+        header{
+            grid-area: cabeçalho;
+            background-color: brown;
+        }
+        aside{
+            grid-area: barra-lateral;
+            background-color: burlywood;
+        }
+        section{
+            grid-area: seção;
+            background-color:darkgoldenrod;
+        }
+        footer{
+            grid-area: rodape;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .item1 , .item2 , .item3 {
+            padding: 25%;
+            background-color: bisque;
+        }
+        .item2{
+            width: 50%;
+            margin: 0 2px;
+        }
+        .item3{
+            margin: 0;
+        }
+        @media (max-width: 992px ){
+        .container {
+            grid-template-columns: 100%;
+        }
+        footer{
+            display:flex ;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .item1 , .item2 , .item3 {
+          margin: 0;
+          border: solid 1px beige;
+          width: 49%; 
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <header>
+           Cabeçalho
+       </header>
+       <section>
+           <p>Conteúdo principal</p>
+       </section>
+           <aside>
+               <p> Barra lateral</p>
+           </aside>
+               <footer>
+                   <div class="Item 1">Item 1</div>
+                   <div class="Item 2">Item 2</div>
+                   <div class="Item 3">Item 3</div>
+               </footer>
+   </div> 
+</body>
+</html>
